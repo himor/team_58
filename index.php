@@ -42,16 +42,12 @@
 
     </form>
 
-    <video id="my-video" class="video-js" preload="auto" width="640" height="380" data-setup='{"controls":false}'>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
-
-
+    <div class="players">
+        <video id="my-video" class="video-js" preload="auto" width="640" height="380" data-setup='{"controls":false}'>
+        </video>
+    </div>
 </div>
-<div style="display:none">Test</div>
+<div id="invisible" class="invisible"></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

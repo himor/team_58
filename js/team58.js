@@ -1,5 +1,7 @@
 var sentence = [],
-    candidate = 'trump';
+    playableSentence = [],
+    candidate = 'trump',
+    manyPlayers = [];
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
@@ -58,28 +60,50 @@ function erasePart(num) {
 
 function play() {
     var myPlayer = videojs('my-video');
-    var fullPhrase = '';
+    var fullPhrases = [];
 
-    playFirst([
-        'samples/trump_actually.mp4',
-        'samples/trump_because.mp4'
-    ]);
+    /* substitute with actual files */
+    $.each(sentence, function (key, phrase) {
+        fullPhrases.push('samples/' + candidate + '_' + phrase + '.mp4');
+    });
+    playableSentence = fullPhrases;
+
+    preload();
+
+    playFirst();
+
+    myPlayer.on('ended', function () {
+        playFirst();
+    });
 }
 
-function playFirst($block) {
-    if (Object.keys($block).length == 0) {
+function preload() {
+    var player;
+
+    $.each(playableSentence, function (key, phrase) {
+        player = $("<video/>", {
+            id: 'vp_' + key,
+            class: "video-js",
+            preload: "auto",
+            width: "640",
+            height: "380",
+            type: "video/mp4",
+            src: phrase
+        }).hide();
+        $('#invisible').append(player);
+        manyPlayers.push(player);
+    });
+}
+
+function playFirst() {
+    if (Object.keys(playableSentence).length == 0) {
+        //videojs('my-video').dispose();
         return;
     }
     var myPlayer = videojs('my-video');
-    var fullPhrase = $block[0];
-    $block.splice(0, 1);
-    console.log(fullPhrase);
-    myPlayer.ready(function () {
-        myPlayer.src({"type": "video/mp4", "src": fullPhrase});
-        myPlayer.play();
-        myPlayer.on('ended', function () {
-            playFirst($block);
-        });
-    });
+    var fullPhrase = playableSentence[0];
+    playableSentence.splice(0, 1);
+    myPlayer.src({"type": "video/mp4", "src": fullPhrase});
+    myPlayer.play();
 }
 
