@@ -10,7 +10,11 @@ $(window).on('load', function () {
             cleanup();
         } else {
             var $input = $(this).val();
-            var xhr = $.ajax({url: 'api.php', method: 'POST', data: {input: $input, candidate: candidate}});
+            var xhr = $.ajax({
+                url: 'api.php',
+                method: 'POST',
+                data: {input: $input, candidate: candidate, command: 'phrase'}
+            });
 
             xhr.done(function (data) {
                 if (Object.keys(data).length == 0) {
@@ -124,3 +128,29 @@ function playFirst() {
     myPlayer.play();
 }
 
+function shareIt() {
+    var xhr = $.ajax({
+        url: 'api.php',
+        method: 'POST',
+        data: {input: sentence, candidate: candidate, command: 'share'}
+    });
+
+    xhr.done(function (data) {
+        $('#share').val('http://146.185.186.82/?share=' + data.key);
+    });
+}
+
+function load(key) {
+    var xhr = $.ajax({
+        url: 'api.php',
+        method: 'POST',
+        data: {input: key, command: 'find'}
+    });
+
+    xhr.done(function (data) {
+        candidate = data.candidate;
+        sentence = data.sentence;
+        updatePhrase();
+        play();
+    });
+}

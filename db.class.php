@@ -17,7 +17,7 @@ class DB
     {
         $key   = $this->keyGen();
         $block = ['_key' => $key] + $block;
-        file_put_contents(serialize($block), static::DB_FILE, FILE_APPEND);
+        file_put_contents(static::DB_FILE, serialize($block) . PHP_EOL, FILE_APPEND);
         return $key;
     }
 

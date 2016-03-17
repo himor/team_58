@@ -36,15 +36,17 @@
 
         <div id="phrase" class="form-group"></div>
 
-        <button type="button" class="btn btn-success" onclick="play()">Say it!</button>
+        <div class="form-group form-inline">
+            <button type="button" class="btn btn-success" onclick="play()">Say it!</button>
+            <button type="button" class="btn btn-warning" onclick="shareIt()">Share</button>
+            <input title="share" readonly class="form-control" type="text" id="share">
+        </div>
 
         <br><br>
 
     </form>
 
     <div class="players">
-<!--        <video id="my-video" class="video-js" preload="auto" width="640" height="380" data-setup='{"controls":false}'>-->
-<!--        </video>-->
     </div>
 </div>
 <div id="invisible" class="invisible"></div>
@@ -54,5 +56,15 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/team58.js"></script>
 <script src="http://vjs.zencdn.net/5.8.0/video.js"></script>
+
+<?php
+if (isset($_GET['share'])) {
+    ?>
+    <script>
+        load(<?php echo "\"" . $_GET['share'] . "\""; ?>);
+    </script>
+    <?php
+}
+?>
 </body>
 </html>
