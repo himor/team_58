@@ -1,21 +1,25 @@
 <?php
 
 include_once("trie.class.php");
-
-ini_set('xdebug.var_display_max_depth', -1);
-ini_set('xdebug.var_display_max_children', 256);
-ini_set('xdebug.var_display_max_data', 1024);
-
-
+header('Content-type: application/json');
 const DICTIONARY = 'dictionary.txt';
 
-$file = file(DICTIONARY);
+$input = strtolower($_POST['input']);
+$result = [];
 
-$trie = new Trie();
-foreach ($file as $line) {
-    $trie->add(trim($line));
+if (!empty($input)) {
+    $file = file(DICTIONARY);
+
+    $trie = new Trie();
+    foreach ($file as $line) {
+        $trie->add(trim($line));
+    }
+
+    $result = array_keys($trie->prefixSearch($input));
 }
 
-var_dump($trie->prefixSearch('i want'));
+if (empty($result)) {
+    $result = [];
+}
 
-var_dump($trie->prefixSearch('say'));
+echo json_encode($result);

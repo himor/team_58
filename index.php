@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/team58.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,11 +19,28 @@
     <![endif]-->
 </head>
 <body>
-<h1>Hello, world!</h1>
+
+<div class="container">
+
+    <form>
+        <div class="form-group">
+            <input title="Input text" placeholder="Input phrase" class="form-control" type="text" id="input">
+        </div>
+
+        <div id="results" class="form-group"></div>
+
+        <div id="phrase" class="form-group"></div>
+
+    </form>
+
+
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/team58.js"></script>
+
 </body>
 </html>
