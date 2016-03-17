@@ -7,7 +7,7 @@ const DICTIONARY = 'dictionary.txt';
 $candidateDictionary = [
     'hil' => 'hil_dictionary.txt',
     'ber' => 'ber_dictionary.txt',
-    'don' => 'don_dictionary.txt',
+    'trump' => 'don_dictionary.txt',
 ];
 
 $input     = strtolower($_POST['input']);

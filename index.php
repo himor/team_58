@@ -13,6 +13,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/team58.css" rel="stylesheet">
 
+    <link href="http://vjs.zencdn.net/5.8.0/video-js.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,7 +36,18 @@
 
         <div id="phrase" class="form-group"></div>
 
+        <button type="button" class="btn btn-success" onclick="play()">Say it!</button>
+
+        <br><br>
+
     </form>
+
+    <video id="my-video" class="video-js" preload="auto" width="640" height="264" data-setup='{"controls":false}'>
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
 
 
 </div>
@@ -44,6 +57,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/team58.js"></script>
-
+<script src="http://vjs.zencdn.net/5.8.0/video.js"></script>
 </body>
 </html>

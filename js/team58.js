@@ -1,5 +1,5 @@
 var sentence = [],
-    candidate;
+    candidate = 'trump';
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
@@ -55,3 +55,16 @@ function erasePart(num) {
     sentence.splice(num, 1);
     updatePhrase();
 }
+
+function play() {
+    var myPlayer = videojs('my-video');
+
+    $.each(sentence, function (key, phrase) {
+        var fullPhrase = 'samples/' + candidate + '_' + phrase + '.mov';
+
+        //var myPlayer = videojs('my-video');
+        myPlayer.src({"type": "video/quicktime", "src": fullPhrase});
+        myPlayer.play()
+    });
+}
+
