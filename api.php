@@ -4,8 +4,15 @@ include_once("trie.class.php");
 header('Content-type: application/json');
 const DICTIONARY = 'dictionary.txt';
 
-$input = strtolower($_POST['input']);
-$result = [];
+$candidateDictionary = [
+    'hil' => 'hil_dictionary.txt',
+    'ber' => 'ber_dictionary.txt',
+    'don' => 'don_dictionary.txt',
+];
+
+$input     = strtolower($_POST['input']);
+$candidate = $_POST['candidate'];
+$result    = [];
 
 if (!empty($input)) {
     $file = file(DICTIONARY);
@@ -13,6 +20,13 @@ if (!empty($input)) {
     $trie = new Trie();
     foreach ($file as $line) {
         $trie->add(trim($line));
+    }
+
+    if (!empty($candidate)) {
+        $fileCandidate = file($candidateDictionary[$candidate]);
+        foreach ($fileCandidate as $line) {
+            $trie->add(trim($line));
+        }
     }
 
     $result = array_keys($trie->prefixSearch($input));

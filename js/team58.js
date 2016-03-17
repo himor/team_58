@@ -1,4 +1,5 @@
-var sentence = [];
+var sentence = [],
+    candidate;
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
@@ -7,28 +8,21 @@ $(window).on('load', function () {
             cleanup();
         } else {
             var $input = $(this).val();
-            var xhr = $.ajax({url: 'api.php', method: 'POST', data: {input: $input}});
+            var xhr = $.ajax({url: 'api.php', method: 'POST', data: {input: $input, candidate: candidate}});
 
             xhr.done(function (data) {
-
                 if (Object.keys(data).length == 0) {
                     return;
                 }
-
                 var $container = $('#results');
-
                 cleanup();
-
                 $.each(data, function (key, phrase) {
                     $container.append('<button type="button" class="btn btn-primary clickable">' + phrase + "</span>");
                 });
-
                 bindClickable();
             });
-
         }
     });
-
 });
 
 function cleanup() {
