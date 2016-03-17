@@ -58,13 +58,28 @@ function erasePart(num) {
 
 function play() {
     var myPlayer = videojs('my-video');
+    var fullPhrase = '';
 
-    $.each(sentence, function (key, phrase) {
-        var fullPhrase = 'samples/' + candidate + '_' + phrase + '.mp4';
+    playFirst([
+        'samples/trump_actually.mp4',
+        'samples/trump_because.mp4'
+    ]);
+}
 
-        //var myPlayer = videojs('my-video');
+function playFirst($block) {
+    if (Object.keys($block).length == 0) {
+        return;
+    }
+    var myPlayer = videojs('my-video');
+    var fullPhrase = $block[0];
+    $block.splice(0, 1);
+    console.log(fullPhrase);
+    myPlayer.ready(function () {
         myPlayer.src({"type": "video/mp4", "src": fullPhrase});
-        myPlayer.play()
+        myPlayer.play();
+        myPlayer.on('ended', function () {
+            playFirst($block);
+        });
     });
 }
 
