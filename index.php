@@ -23,11 +23,12 @@
 <div class="container">
 
     <form>
+
+        <div id="results" class="form-group"></div>
+
         <div class="form-group">
             <input title="Input text" placeholder="Input phrase" class="form-control" type="text" id="input">
         </div>
-
-        <div id="results" class="form-group"></div>
 
         <div id="phrase" class="form-group"></div>
 
