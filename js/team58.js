@@ -60,10 +60,10 @@ function play() {
     var myPlayer = videojs('my-video');
 
     $.each(sentence, function (key, phrase) {
-        var fullPhrase = 'samples/' + candidate + '_' + phrase + '.mov';
+        var fullPhrase = 'samples/' + candidate + '_' + phrase + '.mp4';
 
         //var myPlayer = videojs('my-video');
-        myPlayer.src({"type": "video/quicktime", "src": fullPhrase});
+        myPlayer.src({"type": "video/mp4", "src": fullPhrase});
         myPlayer.play()
     });
 }
