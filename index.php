@@ -43,8 +43,8 @@
     </form>
 
     <div class="players">
-        <video id="my-video" class="video-js" preload="auto" width="640" height="380" data-setup='{"controls":false}'>
-        </video>
+<!--        <video id="my-video" class="video-js" preload="auto" width="640" height="380" data-setup='{"controls":false}'>-->
+<!--        </video>-->
     </div>
 </div>
 <div id="invisible" class="invisible"></div>

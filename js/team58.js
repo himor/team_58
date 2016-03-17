@@ -59,7 +59,8 @@ function erasePart(num) {
 }
 
 function play() {
-    var myPlayer = videojs('my-video');
+    $("form :input").prop('readonly', true);
+
     var fullPhrases = [];
 
     /* substitute with actual files */
@@ -68,13 +69,12 @@ function play() {
     });
     playableSentence = fullPhrases;
 
+    loop();
+}
+
+function loop() {
     preload();
-
-    playFirst();
-
-    myPlayer.on('ended', function () {
-        playFirst();
-    });
+    playNumber(0);
 }
 
 function preload() {
@@ -86,21 +86,38 @@ function preload() {
             class: "video-js",
             preload: "auto",
             width: "640",
-            height: "380",
+            height: "320",
             type: "video/mp4",
             src: phrase
         }).hide();
-        $('#invisible').append(player);
-        manyPlayers.push(player);
-    });
+        $('.players').append(player);
+
+        player.on('ended', function () {
+            $(this).remove();
+            if ((key + 1) in playableSentence) {
+                playNumber(key + 1);
+            } else {
+                videojs('vp_' + key).dispose();
+                loop();
+            }
+        })
+    })
+}
+
+function playNumber(num) {
+    if (num > 0) {
+        videojs('vp_' + (num - 1)).dispose();
+    }
+    $('#vp_' + num).show();
+    videojs('vp_' + num).play();
 }
 
 function playFirst() {
+    var myPlayer = videojs('my-video');
+
     if (Object.keys(playableSentence).length == 0) {
-        //videojs('my-video').dispose();
         return;
     }
-    var myPlayer = videojs('my-video');
     var fullPhrase = playableSentence[0];
     playableSentence.splice(0, 1);
     myPlayer.src({"type": "video/mp4", "src": fullPhrase});
