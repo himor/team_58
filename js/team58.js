@@ -40,11 +40,24 @@ function unbindClickable() {
     $('.clickable').unbind('click');
 }
 
+function updatePhrase() {
+    $('#phrase').empty();
+    $.each(sentence, function (key, phrase) {
+        $('#phrase').append("<span class='part' id='id_" + key + "' onclick='erasePart(" + key + ");'>" + phrase + "</span>");
+    });
+}
+
 function bindClickable() {
     $('.clickable').on('click', function () {
         var $this = $(this);
         sentence.push($this.html());
         $('#input').val('').focus();
         cleanup();
+        updatePhrase();
     });
+}
+
+function erasePart(num) {
+    sentence.splice(num, 1);
+    updatePhrase();
 }
