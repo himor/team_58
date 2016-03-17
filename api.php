@@ -29,7 +29,7 @@ if (!empty($input)) {
         }
     }
 
-    $result = array_keys($trie->prefixSearch($input));
+    $result = array_unique(array_keys($trie->prefixSearch($input)));
 }
 
 if (empty($result)) {
