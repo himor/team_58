@@ -62,6 +62,7 @@ body {
 
 .popular {
     border-top: 1px dashed #060A5B;
+    width: 850px;
 }
 
 .popular .part {
