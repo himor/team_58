@@ -60,6 +60,10 @@ body {
     cursor: crosshair;
 }
 
+.popular {
+    border-top: 1px dashed #060A5B;
+}
+
 .popular .part {
     margin: 0 5px 5px 0;
 }
@@ -156,15 +160,14 @@ body {
 }
 
 #description {
-    font-size: 18px;
+    font-size: 23px;
     font-family: 'Gotham Bold';
-    padding-top: 45px;
     display: block;
     color: #060A5B;
 }
 
 .popular span {
-    font-size: 30px;
+    font-size: 45px;
 }
 
 #all {

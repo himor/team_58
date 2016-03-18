@@ -134,7 +134,31 @@
                         <button type="button" class="btn btn-primary clickable">making</button>
                         <button type="button" class="btn btn-primary clickable">need</button>
                         <button type="button" class="btn btn-primary clickable">lost</button>
-                        <button type="button" class="btn btn-primary clickable">lost</button>
+                        <button type="button" class="btn btn-primary clickable">love</button>
+                        <button type="button" class="btn btn-primary clickable">make</button>
+                        <button type="button" class="btn btn-primary clickable">making</button>
+                        <button type="button" class="btn btn-primary clickable">need</button>
+                        <button type="button" class="btn btn-primary clickable">run</button>
+                        <button type="button" class="btn btn-primary clickable">said</button>
+                        <button type="button" class="btn btn-primary clickable">say</button>
+                        <button type="button" class="btn btn-primary clickable">saying</button>
+                        <button type="button" class="btn btn-primary clickable">schlonged</button>
+                        <button type="button" class="btn btn-primary clickable">sex</button>
+                        <button type="button" class="btn btn-primary clickable">show</button>
+                        <button type="button" class="btn btn-primary clickable">stop</button>
+                        <button type="button" class="btn btn-primary clickable">supposed</button>
+                        <button type="button" class="btn btn-primary clickable">take</button>
+                        <button type="button" class="btn btn-primary clickable">taunted</button>
+                        <button type="button" class="btn btn-primary clickable">thats</button>
+                        <button type="button" class="btn btn-primary clickable">theyre</button>
+                        <button type="button" class="btn btn-primary clickable">think</button>
+                        <button type="button" class="btn btn-primary clickable">trade</button>
+                        <button type="button" class="btn btn-primary clickable">wants</button>
+                        <button type="button" class="btn btn-primary clickable">was</button>
+                        <button type="button" class="btn btn-primary clickable">whats</button>
+                        <button type="button" class="btn btn-primary clickable">will</button>
+                        <button type="button" class="btn btn-primary clickable">you know</button>
+                        <button type="button" class="btn btn-primary clickable">youre</button>
                     </div>
                 </div>
                 <div class="category">
@@ -156,13 +180,38 @@
                         <button type="button" class="btn btn-primary clickable">deals</button>
                         <button type="button" class="btn btn-primary clickable">deficits</button>
                         <button type="button" class="btn btn-primary clickable">delegate</button>
+                        <button type="button" class="btn btn-primary clickable">donald j trump</button>
+                        <button type="button" class="btn btn-primary clickable">donor</button>
+                        <button type="button" class="btn btn-primary clickable">drug</button>
+                        <button type="button" class="btn btn-primary clickable">establishment</button>
+                        <button type="button" class="btn btn-primary clickable">everybody 1</button>
+                        <button type="button" class="btn btn-primary clickable">everything</button>
+                        <button type="button" class="btn btn-primary clickable">favorite</button>
+                        <button type="button" class="btn btn-primary clickable">figure</button>
+                        <button type="button" class="btn btn-primary clickable">funding</button>
+                        <button type="button" class="btn btn-primary clickable">hillary</button>
+                        <button type="button" class="btn btn-primary clickable">his daughter</button>
+                        <button type="button" class="btn btn-primary clickable">i</button>
+                        <button type="button" class="btn btn-primary clickable">interest</button>
+                        <button type="button" class="btn btn-primary clickable">isis</button>
+                        <button type="button" class="btn btn-primary clickable">lobiest</button>
+                        <button type="button" class="btn btn-primary clickable">love</button>
+                        <button type="button" class="btn btn-primary clickable">member</button>
+                        <button type="button" class="btn btn-primary clickable">military</button>
+                        <button type="button" class="btn btn-primary clickable">money 1</button>
+                        <button type="button" class="btn btn-primary clickable">money</button>
+                        <button type="button" class="btn btn-primary clickable">muslims</button>
+                        <button type="button" class="btn btn-primary clickable">nobodys</button>
+                        <button type="button" class="btn btn-primary clickable">obama</button>
+                        <button type="button" class="btn btn-primary clickable">one</button>
+                        <button type="button" class="btn btn-primary clickable">ones</button>
                     </div>
                 </div>
 
                 <div class="category">
                     <div class="category-title">Adjectives</div>
                     <div class="list">
-                        <button type="button" class="btn btn-primary clickable">abd</button>
+                        <button type="button" class="btn btn-primary clickable">bad</button>
                         <button type="button" class="btn btn-primary clickable">better</button>
                         <button type="button" class="btn btn-primary clickable">big</button>
                         <button type="button" class="btn btn-primary clickable">close_1</button>
@@ -178,13 +227,65 @@
                         <button type="button" class="btn btn-primary clickable">great</button>
                         <button type="button" class="btn btn-primary clickable">its</button>
                         <button type="button" class="btn btn-primary clickable">less</button>
+                        <button type="button" class="btn btn-primary clickable">lost</button>
+                        <button type="button" class="btn btn-primary clickable">lots</button>
+                        <button type="button" class="btn btn-primary clickable">mean</button>
+                        <button type="button" class="btn btn-primary clickable">most</button>
+                        <button type="button" class="btn btn-primary clickable">my</button>
+                        <button type="button" class="btn btn-primary clickable">next</button>
+                        <button type="button" class="btn btn-primary clickable">one</button>
+                        <button type="button" class="btn btn-primary clickable">proud</button>
+                        <button type="button" class="btn btn-primary clickable">really</button>
+                        <button type="button" class="btn btn-primary clickable">right</button>
+                        <button type="button" class="btn btn-primary clickable">second</button>
+                        <button type="button" class="btn btn-primary clickable">smart</button>
+                        <button type="button" class="btn btn-primary clickable">so beautiful</button>
+                        <button type="button" class="btn btn-primary clickable">so</button>
+                        <button type="button" class="btn btn-primary clickable">special</button>
+                        <button type="button" class="btn btn-primary clickable">supposed</button>
+                        <button type="button" class="btn btn-primary clickable">talented</button>
+                        <button type="button" class="btn btn-primary clickable">that</button>
+                        <button type="button" class="btn btn-primary clickable">there</button>
+                        <button type="button" class="btn btn-primary clickable">these</button>
+                        <button type="button" class="btn btn-primary clickable">this</button>
+                        <button type="button" class="btn btn-primary clickable">unstopable</button>
+                        <button type="button" class="btn btn-primary clickable">up</button>
+                        <button type="button" class="btn btn-primary clickable">very nice</button>
+                        <button type="button" class="btn btn-primary clickable">very</button>
+                        <button type="button" class="btn btn-primary clickable">well</button>
+                        <button type="button" class="btn btn-primary clickable">what</button>
+                        <button type="button" class="btn btn-primary clickable">worse</button>
+                        <button type="button" class="btn btn-primary clickable">wrong</button>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">Adverbs</div>
+                    <div class="list">
+                        <button type="button" class="btn btn-primary clickable">actually</button>
+                        <button type="button" class="btn btn-primary clickable">certainly</button>
+                        <button type="button" class="btn btn-primary clickable">even</button>
+                        <button type="button" class="btn btn-primary clickable">far</button>
+                        <button type="button" class="btn btn-primary clickable">frankly</button>
+                        <button type="button" class="btn btn-primary clickable">theyrinterestingly</button>
+                        <button type="button" class="btn btn-primary clickable">perhaps</button>
+                        <button type="button" class="btn btn-primary clickable">really</button>
+                        <button type="button" class="btn btn-primary clickable">so</button>
+                        <button type="button" class="btn btn-primary clickable">there</button>
+                        <button type="button" class="btn btn-primary clickable">totally</button>
+                        <button type="button" class="btn btn-primary clickable">unlikely</button>
+                        <button type="button" class="btn btn-primary clickable">up</button>
+                        <button type="button" class="btn btn-primary clickable">usually</button>
+                        <button type="button" class="btn btn-primary clickable">well</button>
+                        <button type="button" class="btn btn-primary clickable">what</button>
+                        <button type="button" class="btn btn-primary clickable">worse</button>
                     </div>
                 </div>
 
                 <div class="category">
                     <div class="category-title">Leftovers</div>
                     <div class="list">
-                        <button type="button" class="btn btn-primary clickable">a beatuful young woman</button>
+                        <button type="button" class="btn btn-primary clickable">a beautiful young woman</button>
                         <button type="button" class="btn btn-primary clickable">by the way</button>
                         <button type="button" class="btn btn-primary clickable">cracked up</button>
                         <button type="button" class="btn btn-primary clickable">etc</button>

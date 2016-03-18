@@ -45,6 +45,9 @@
             background-color: #060A5B;
             border-color: #060A5B;
         }
+        #description {
+            padding-top: 25px;
+        }
     </style>
 </head>
 <body>
