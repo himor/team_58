@@ -215,7 +215,7 @@
                         <button type="button" class="btn btn-primary clickable">bad</button>
                         <button type="button" class="btn btn-primary clickable">better</button>
                         <button type="button" class="btn btn-primary clickable">big</button>
-                        <button type="button" class="btn btn-primary clickable">close_1</button>
+                        <button type="button" class="btn btn-primary clickable">close 1</button>
                         <button type="button" class="btn btn-primary clickable">close</button>
                         <button type="button" class="btn btn-primary clickable">controled</button>
                         <button type="button" class="btn btn-primary clickable">crazy</button>
@@ -293,7 +293,7 @@
                         <button type="button" class="btn btn-primary clickable">ever</button>
                         <button type="button" class="btn btn-primary clickable">hes</button>
                         <button type="button" class="btn btn-primary clickable">little while ago</button>
-                        <button type="button" class="btn btn-primary clickable">no_problem</button>
+                        <button type="button" class="btn btn-primary clickable">no problem</button>
                         <button type="button" class="btn btn-primary clickable">nobodys</button>
                         <button type="button" class="btn btn-primary clickable">so beautiful</button>
                         <button type="button" class="btn btn-primary clickable">so i sad</button>
