@@ -168,7 +168,7 @@ body {
 }
 
 #all {
-    border-top: 1px solid #060A5B;
+    border-top: 1px dashed #060A5B;
     margin-top: 10px;
     width: 850px;
 
@@ -197,4 +197,11 @@ body {
 #phrase .part {
     font-family: 'Gotham Bold';
     font-size: 30px;
+}
+
+#play_button {
+    font-family: 'Gotham Bold';
+    padding-top: 10px;
+    font-size: 40px;
+    line-height: 55px;
 }

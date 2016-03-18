@@ -41,7 +41,6 @@
             width: 152px;
             height: 73px;
             background-color: #707070;
-            font-size: 25px;
             color: #fff;
             border-radius: 10px;
             text-transform: uppercase;
@@ -103,7 +102,7 @@
                         <button type="button" class="btn btn-primary clickable">calling</button>
                         <button type="button" class="btn btn-primary clickable">came</button>
                         <button type="button" class="btn btn-primary clickable">cant</button>
-                        <button type="button" class="btn btn-primary clickable">control_1</button>
+                        <button type="button" class="btn btn-primary clickable">control 1</button>
                         <button type="button" class="btn btn-primary clickable">dealing</button>
                         <button type="button" class="btn btn-primary clickable">decided</button>
                         <button type="button" class="btn btn-primary clickable">do</button>
@@ -111,6 +110,31 @@
                         <button type="button" class="btn btn-primary clickable">dont</button>
                         <button type="button" class="btn btn-primary clickable">entering</button>
                         <button type="button" class="btn btn-primary clickable">fighting</button>
+                        <button type="button" class="btn btn-primary clickable">gave</button>
+                        <button type="button" class="btn btn-primary clickable">going</button>
+                        <button type="button" class="btn btn-primary clickable">gonna be</button>
+                        <button type="button" class="btn btn-primary clickable">got</button>
+                        <button type="button" class="btn btn-primary clickable">guess</button>
+                        <button type="button" class="btn btn-primary clickable">happened</button>
+                        <button type="button" class="btn btn-primary clickable">happens</button>
+                        <button type="button" class="btn btn-primary clickable">harassed</button>
+                        <button type="button" class="btn btn-primary clickable">have</button>
+                        <button type="button" class="btn btn-primary clickable">i am</button>
+                        <button type="button" class="btn btn-primary clickable">i want to</button>
+                        <button type="button" class="btn btn-primary clickable">im</button>
+                        <button type="button" class="btn btn-primary clickable">is</button>
+                        <button type="button" class="btn btn-primary clickable">joking</button>
+                        <button type="button" class="btn btn-primary clickable">know</button>
+                        <button type="button" class="btn btn-primary clickable">laughed</button>
+                        <button type="button" class="btn btn-primary clickable">leave</button>
+                        <button type="button" class="btn btn-primary clickable">left</button>
+                        <button type="button" class="btn btn-primary clickable">lost</button>
+                        <button type="button" class="btn btn-primary clickable">love</button>
+                        <button type="button" class="btn btn-primary clickable">make</button>
+                        <button type="button" class="btn btn-primary clickable">making</button>
+                        <button type="button" class="btn btn-primary clickable">need</button>
+                        <button type="button" class="btn btn-primary clickable">lost</button>
+                        <button type="button" class="btn btn-primary clickable">lost</button>
                     </div>
                 </div>
                 <div class="category">
@@ -122,7 +146,7 @@
                         <button type="button" class="btn btn-primary clickable">campaign</button>
                         <button type="button" class="btn btn-primary clickable">cards</button>
                         <button type="button" class="btn btn-primary clickable">companies</button>
-                        <button type="button" class="btn btn-primary clickable">control_1</button>
+                        <button type="button" class="btn btn-primary clickable">control 1</button>
                         <button type="button" class="btn btn-primary clickable">control</button>
                         <button type="button" class="btn btn-primary clickable">convention</button>
                         <button type="button" class="btn btn-primary clickable">country</button>
@@ -160,20 +184,20 @@
                 <div class="category">
                     <div class="category-title">Leftovers</div>
                     <div class="list">
-                        <button type="button" class="btn btn-primary clickable">a_beatuful_young_woman</button>
-                        <button type="button" class="btn btn-primary clickable">by_the_way</button>
-                        <button type="button" class="btn btn-primary clickable">cracked_up</button>
+                        <button type="button" class="btn btn-primary clickable">a beatuful young woman</button>
+                        <button type="button" class="btn btn-primary clickable">by the way</button>
+                        <button type="button" class="btn btn-primary clickable">cracked up</button>
                         <button type="button" class="btn btn-primary clickable">etc</button>
                         <button type="button" class="btn btn-primary clickable">ever</button>
                         <button type="button" class="btn btn-primary clickable">hes</button>
-                        <button type="button" class="btn btn-primary clickable">little_while_ago</button>
+                        <button type="button" class="btn btn-primary clickable">little while ago</button>
                         <button type="button" class="btn btn-primary clickable">no_problem</button>
                         <button type="button" class="btn btn-primary clickable">nobodys</button>
-                        <button type="button" class="btn btn-primary clickable">so_beautiful</button>
-                        <button type="button" class="btn btn-primary clickable">so_i_sad</button>
+                        <button type="button" class="btn btn-primary clickable">so beautiful</button>
+                        <button type="button" class="btn btn-primary clickable">so i sad</button>
                         <button type="button" class="btn btn-primary clickable">thats</button>
                         <button type="button" class="btn btn-primary clickable">theyre</button>
-                        <button type="button" class="btn btn-primary clickable">thousands_and_thousands</button>
+                        <button type="button" class="btn btn-primary clickable">thousands and thousands</button>
                         <button type="button" class="btn btn-primary clickable">uh</button>
                         <button type="button" class="btn btn-primary clickable">well</button>
                     </div>
