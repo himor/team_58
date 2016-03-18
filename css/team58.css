@@ -8,6 +8,7 @@ body {
 
 #share {
     width:400px;
+    display: none;
 }
 
 .clickable {

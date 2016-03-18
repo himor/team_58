@@ -1,7 +1,8 @@
 var sentence = [],
     playableSentence = [],
     candidate = 'trump',
-    manyPlayers = [];
+    manyPlayers = [],
+    dontShareIt = false;
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
@@ -64,6 +65,7 @@ function erasePart(num) {
 
 function play() {
     $("form :input").prop('readonly', true);
+    $("#play_button").prop('disabled', true);
 
     var fullPhrases = [];
 
@@ -74,6 +76,7 @@ function play() {
     playableSentence = fullPhrases;
 
     loop();
+    shareIt();
 }
 
 function loop() {
@@ -129,6 +132,10 @@ function playFirst() {
 }
 
 function shareIt() {
+    if (dontShareIt) {
+        return;
+    }
+
     var xhr = $.ajax({
         url: 'api.php',
         method: 'POST',
@@ -136,11 +143,13 @@ function shareIt() {
     });
 
     xhr.done(function (data) {
-        $('#share').val('http://146.185.186.82/?share=' + data.key);
+        $('#share').val('http://146.185.186.82/?share=' + data.key).show();
     });
 }
 
 function load(key) {
+    dontShareIt = true;
+
     var xhr = $.ajax({
         url: 'api.php',
         method: 'POST',

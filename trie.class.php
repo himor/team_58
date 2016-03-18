@@ -7,6 +7,8 @@
  * User: Tuan Duong <bacduong[at]gmail[dot]com>
  * Date: 8/10/14
  * Time: 2:32 PM
+ *
+ * Updated by Mike Gordo
  */
 class Trie
 {
