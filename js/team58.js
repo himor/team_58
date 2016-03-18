@@ -25,7 +25,7 @@ $(window).on('load', function () {
                 cleanup();
                 $.each(data, function (key, phrase) {
                     $container.append('<button type="button" class="btn btn-primary clickable">' +
-                        phrase.replace("_", " ") +
+                        phrase.replace(/_/g, " ") +
                         "</button>");
                 });
                 bindClickable();
@@ -71,9 +71,9 @@ function gluePhrase(parts, canErase) {
             phrases.push(" onclick='erasePart(" + key + ");'");
         }
         if (key == 0) {
-            phrases.push(">" + capitalizeFirstLetter(phrase.replace("_", " ")) + "</span>");
+            phrases.push(">" + capitalizeFirstLetter(phrase.replace(/_/g, " ")) + "</span>");
         } else {
-            phrases.push(">" + phrase.replace("_", " ") + "</span>");
+            phrases.push(">" + phrase.replace(/_/g, " ") + "</span>");
         }
     });
     return phrases.join('');
@@ -86,7 +86,7 @@ function updatePhrase() {
 function bindClickable() {
     $('.clickable').on('click', function () {
         var $this = $(this);
-        sentence.push($this.html().replace(" ", "_"));
+        sentence.push($this.html().replace(/ /g, "_"));
         $('#input').val('').focus();
         cleanup();
         updatePhrase();
