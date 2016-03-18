@@ -8,9 +8,9 @@ header('Content-type: application/json');
 const DICTIONARY = 'dictionary.txt';
 
 $candidateDictionary = [
-    'hil'   => 'hil_dictionary.txt',
-    'ber'   => 'ber_dictionary.txt',
-    'trump' => 'don_dictionary.txt',
+    'hillary' => 'hil_dictionary.txt',
+    'bernie'  => 'ber_dictionary.txt',
+    'trump'   => 'don_dictionary.txt',
 ];
 
 $result = [];
