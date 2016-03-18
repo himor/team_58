@@ -66,7 +66,7 @@
     <div id="main-block">
         <div id="right-block">
             <div id="head">
-                <div id="title">Donald<br/>Trump</div>
+                <div id="title">Bernie<br/>Sanders</div>
                 <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.
                 </div>
