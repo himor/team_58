@@ -135,7 +135,8 @@ function preload() {
             } else {
                 sleepFor(500);
                 videojs('vp_' + key).dispose();
-                loop();
+                $("#play_button").prop('disabled', false);
+                dontShareIt = true;
             }
         })
     })
