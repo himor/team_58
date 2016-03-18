@@ -48,8 +48,11 @@ $(window).on('load', function () {
             );
         })
     })
-
 });
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function cleanup() {
     unbindClickable();
@@ -67,7 +70,11 @@ function gluePhrase(parts, canErase) {
         if (canErase) {
             phrases.push(" onclick='erasePart(" + key + ");'");
         }
-        phrases.push(">" + phrase.replace("_", " ") + "</span>");
+        if (key == 0) {
+            phrases.push(">" + capitalizeFirstLetter(phrase.replace("_", " ")) + "</span>");
+        } else {
+            phrases.push(">" + phrase.replace("_", " ") + "</span>");
+        }
     });
     return phrases.join('');
 }
