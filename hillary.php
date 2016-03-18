@@ -91,7 +91,7 @@
             </form>
             <div class="players">
             </div>
-            <div id="popular-title">Recently searches</div>
+            <div id="popular-title">Recent searches</div>
             <div class="popular">
             </div>
             <div id="all">
