@@ -6,31 +6,27 @@ var sentence = [],
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
-        if (event.which == 27 || event.keyCode == 27) {
-            $(this).val('');
-            cleanup();
-        } else {
-            var $input = $(this).val();
-            var xhr = $.ajax({
-                url: 'api.php',
-                method: 'POST',
-                data: {input: $input, candidate: candidate, command: 'phrase'}
-            });
+        var $input = $(this).val();
+        var xhr = $.ajax({
+            url: 'api.php',
+            method: 'POST',
+            data: {input: $input, candidate: candidate, command: 'phrase'}
+        });
 
-            xhr.done(function (data) {
-                if (Object.keys(data).length == 0) {
-                    return;
-                }
-                var $container = $('#results');
-                cleanup();
-                $.each(data, function (key, phrase) {
-                    $container.append('<button type="button" class="btn btn-primary clickable">' +
-                        phrase.replace(/_/g, " ") +
-                        "</button>");
-                });
-                bindClickable();
+        xhr.done(function (data) {
+            if (Object.keys(data).length == 0) {
+                return;
+            }
+            var $container = $('#results');
+            unbindClickable();
+            cleanup();
+            $.each(data, function (key, phrase) {
+                $container.append('<button type="button" class="btn btn-primary clickable">' +
+                    phrase.replace(/_/g, " ") +
+                    "</button>");
             });
-        }
+            bindClickable();
+        });
     });
 
     var xhr = $.ajax({
@@ -55,7 +51,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function cleanup() {
-    unbindClickable();
+    //unbindClickable();
     $('#results').empty();
 }
 
