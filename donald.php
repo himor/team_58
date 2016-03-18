@@ -107,10 +107,10 @@
 <?php
 if (isset($_GET['share'])) {
     ?>
-<script>
-    load(<?php echo "\"" . $_GET['share'] . "\""; ?>);
-</script>
-<?php
+    <script>
+        load(<?php echo "\"" . $_GET['share'] . "\""; ?>);
+    </script>
+    <?php
 }
 ?>
 
