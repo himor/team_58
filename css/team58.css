@@ -21,6 +21,7 @@ body {
 
 #results {
     min-height: 40px;
+    padding-top: 20px;
 }
 
 #share {
