@@ -78,7 +78,7 @@
                 <div id="results" class="form-group"></div>
                 <div id="control-block" class="form-group form-inline">
                     <input title="Input text" placeholder="Start typing here" class="form-control" type="text" id="input">
-                    <button type="button" class="btn btn-success" id="play_button" onclick="play()">enter</button>
+                    <button type="button" class="btn btn-success" id="play_button" onclick="play()">play</button>
                 </div>
                 <div id="phrase" class="form-group"></div>
                 <div class="form-group form-inline">
