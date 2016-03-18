@@ -45,6 +45,12 @@
             background-color: #060A5B;
             border-color: #060A5B;
         }
+        #description {
+            padding-top: 25px !important;
+        }
+        .small-icon {
+            margin: 10px 65px 25px 85px !important;
+        }
     </style>
 </head>
 <body>

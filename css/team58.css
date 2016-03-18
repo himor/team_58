@@ -63,9 +63,13 @@ body {
 
 /* HTML */
 
+body {
+    min-width: 1250px;
+}
+
 #content {
     min-width: 1250px;
-    position: relative;
+    position: absolute;
     left: 50%;
     margin-left: -625px;
     margin-top: 20px;
@@ -133,16 +137,18 @@ body {
     float: left;
     margin-right: 45px;
     font-family: 'Gotham Bold';
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 100px;
     color: #060A5B;
-    line-height: 75px;
+    line-height: 100px;
+
 }
 
 #description {
     font-size: 18px;
     font-family: 'Gotham Bold';
-    padding-top: 15px;
+    padding-top: 45px;
     display: block;
     color: #060A5B;
 }
