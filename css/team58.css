@@ -61,7 +61,7 @@ body {
 }
 
 .popular {
-    border-top: 1px dashed #060A5B;
+
     width: 850px;
 }
 
@@ -208,4 +208,14 @@ body {
     padding-top: 10px;
     font-size: 40px;
     line-height: 55px;
+}
+
+#popular-title {
+    width: 850px;
+    text-align: right;
+    font-family: 'Gotham Bold';
+    text-align: right;
+    font-size: 45px;
+    color: #ccc;
+    border-top: 1px dashed #060A5B;
 }
