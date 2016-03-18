@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta></meta>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        @font-face{
+            font-family:'Gotham Medium';
+            src:url(fonts/gotham-medium.eot);
+            src:url(fonts/gotham-medium.eot?#iefix) format('embedded-opentype'),
+                url(fonts/gotham-medium.woff) format('woff'),
+                url(fonts/gotham-medium.ttf) format('ttf');
+        }
+        @font-face{
+            font-family:'Gotham Bold';
+            src:url(fonts/gotham-bold.eot);
+            src:url(fonts/gotham-bold.eot?#iefix) format('embedded-opentype'),
+            url(fonts/gotham-bold.woff) format('woff'),
+            url(fonts/gotham-bold.ttf) format('ttf');
+        }
+        #header {
+            margin: 40px 0 0;
+            font-size: 100px;
+            color: #060A5B;
+            text-align: center;
+            width: 100%;
+            font-family: 'Gotham Bold';
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        #description {
+            margin: 25px 0 0;
+            text-align: center;
+            color: #060A5B;
+            font-size: 25px;
+            font-weight: 100;
+            font-family: 'Gotham Medium';
+        }
+        #title {
+            margin: 60px 0 40px;
+            color: #373737;
+            text-align: center;
+            font-size: 25px;
+            font-style: italic;
+            font-weight: 500;
+            font-family: 'Gotham Medium';
+        }
+        body {
+            min-width: 960px;
+        }
+        #candidates-list {
+            position: relative;
+            width: 846px;
+            left: 50%;
+            margin-left: -423px;
+        }
+        .icon {
+            width: 215px;
+            height: 270px;
+            display: block;
+            float: left;
+
+        }
+        #hillary {
+            margin-left: auto;
+
+        }
+        .separator {
+            width: 100px;
+            float: left;
+            height: 50px;
+        }
+        #hillary:hover img{
+            content:url(images/hillary_hover.png);
+        }
+        #trump:hover img{
+            content:url(images/donald_hover.png);
+        }
+        #bernie:hover img{
+            content:url(images/bernie_hover.png);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">they say anything</div>
+    <div id="description">
+        Create a new speech for your favorite candidate. They say everything you want. <br/>
+        Create a new speech for your favorite candidate. They say everything you want. <br/>
+        You can pick Hillary, Trump or Bernie. Just click on the icon <br/>
+        They are ready to tell anything <br/>
+    </div>
+    <div id="title">Choose your hero:</div>
+    <div id="candidates-list">
+        <a href="#" class="icon" id="hillary"><img src="images/hillary_homepage.png"/></a>
+        <div class="separator"></div>
+        <a href="#" class="icon" id="trump"><img src="images/donald_homepage.png"/></a>
+        <div class="separator"></div>
+        <a href="#" class="icon" id="bernie"><img src="images/bernie_homepage.png"/></a>
+    </div>
+</body>
+</html>
