@@ -189,7 +189,7 @@ body {
     border: none;
 }
 
-#results button{
+.clickable, #results button{
     font-family: 'Gotham Bold';
     font-size: 30px;
 }
