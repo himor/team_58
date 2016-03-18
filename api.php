@@ -10,7 +10,7 @@ const DICTIONARY = 'dictionary.txt';
 $candidateDictionary = [
     'hillary' => 'hil_dictionary.txt',
     'bernie'  => 'ber_dictionary.txt',
-    'trump'   => 'don_dictionary.txt',
+    'donald'   => 'don_dictionary.txt',
 ];
 
 $result = [];

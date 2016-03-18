@@ -2,7 +2,7 @@ var sentence = [],
     playableSentence = [],
     manyPlayers = [],
     dontShareIt = false,
-    base = 'http://mixer.quacks.org/?share=';
+    base = 'http://mixer.quacks.org/' + candidate + '.php?share=';
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {

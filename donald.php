@@ -100,7 +100,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script>
-    var candidate = 'trump';
+    var candidate = 'donald';
 </script>
 <script src="js/team58.js"></script>
 <script src="http://vjs.zencdn.net/5.8.0/video.js"></script>
