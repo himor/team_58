@@ -1,7 +1,9 @@
 <?php
 
-include_once("trie.class.php");
-include_once("redis.class.php");
+include_once "vendor/autoload.php";
+include_once "trie.class.php";
+include_once "redis.class.php";
+
 header('Content-type: application/json');
 const DICTIONARY = 'dictionary.txt';
 
@@ -19,31 +21,35 @@ switch ($_POST['command']) {
         $candidate = $_POST['candidate'];
 
         if (!empty($input)) {
-            $file = file(DICTIONARY);
             $trie = new Trie();
-            foreach ($file as $line) {
-                $trie->add(trim($line));
-            }
-            if (!empty($candidate)) {
-                $fileCandidate = file($candidateDictionary[$candidate]);
-                foreach ($fileCandidate as $line) {
+            if (!$trie->loadFromRedis($candidate)) {
+                $file = file(DICTIONARY);
+                $trie = new Trie();
+                foreach ($file as $line) {
                     $trie->add(trim($line));
                 }
+                if (!empty($candidate)) {
+                    $fileCandidate = file($candidateDictionary[$candidate]);
+                    foreach ($fileCandidate as $line) {
+                        $trie->add(trim($line));
+                    }
+                }
+                $trie->saveToRedis($candidate);
             }
             $result = array_unique(array_keys($trie->prefixSearch($input)));
         }
         break;
     case "share":
-        $db     = new DB();
-        $input = $_POST['input'];
+        $db                  = new DB();
+        $input               = $_POST['input'];
         $input['_candidate'] = $_POST['candidate'];
-        $result = [
+        $result              = [
             'key' => $db->add($input)
         ];
         break;
     case "find":
-        $db     = new DB();
-        $key = $_POST['input'];
+        $db    = new DB();
+        $key   = $_POST['input'];
         $block = $db->find($key);
         if (!empty($block)) {
             $result['candidate'] = $block['_candidate'];

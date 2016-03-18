@@ -1,7 +1,5 @@
 <?php
 
-require "vendor/predis/predis/autoload.php";
-
 /**
  * Class DB
  */
@@ -29,12 +27,19 @@ class DB
      * Add array to file
      *
      * @param array $block
+     * @param null  $key
+     * @param int   $ttl
      * @return string - short key
      */
-    public function add($block = [])
+    public function add($block = [], $key = null, $ttl = 0)
     {
-        $key = $this->keyGen();
+        if (empty($key)) {
+            $key = $this->keyGen();
+        }
         $this->client->set($key, serialize($block));
+        if ($ttl > 0) {
+            $this->client->expire($key, $ttl);
+        }
         return $key;
     }
 
