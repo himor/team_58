@@ -126,7 +126,7 @@
                         <button type="button" class="btn btn-primary clickable">need</button>
                         <button type="button" class="btn btn-primary clickable">pleasure</button>
                         <button type="button" class="btn btn-primary clickable">say NG</button>
-                        <button type="button" class="btn btn-primary clickable">schlong</button>
+                        <button type="button" class="btn btn-primary clickable">schlonged</button>
                         <button type="button" class="btn btn-primary clickable">stop</button>
                         <button type="button" class="btn btn-primary clickable">talk</button>
                         <button type="button" class="btn btn-primary clickable">trump</button>
