@@ -25,7 +25,8 @@ $(window).on('load', function () {
                 var $container = $('#results');
                 cleanup();
                 $.each(data, function (key, phrase) {
-                    $container.append('<button type="button" class="btn btn-primary clickable">' + phrase + "</span>");
+                    $container.append('<button type="button" class="btn btn-primary clickable">' +
+                        phrase.replace("_", " ") + "</span>");
                 });
                 bindClickable();
             });
@@ -66,7 +67,7 @@ function gluePhrase(parts, canErase) {
         if (canErase) {
             phrases.push(" onclick='erasePart(" + key + ");'");
         }
-        phrases.push(">" + phrase + "</span>");
+        phrases.push(">" + phrase.replace("_", " ") + "</span>");
     });
     return phrases.join('');
 }
@@ -78,7 +79,7 @@ function updatePhrase() {
 function bindClickable() {
     $('.clickable').on('click', function () {
         var $this = $(this);
-        sentence.push($this.html());
+        sentence.push($this.html().replace(" ", "_"));
         $('#input').val('').focus();
         cleanup();
         updatePhrase();

@@ -63,7 +63,7 @@ switch ($_POST['command']) {
     case "recent":
         $candidate = $_POST['candidate'];
         $db        = new DB();
-        $block    = $db->findRecent($candidate);
+        $block     = $db->findRecent($candidate);
 
         foreach ($block as $key => $item) {
             $temp = $item['_key'];
