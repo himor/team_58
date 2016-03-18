@@ -84,8 +84,8 @@ class DB
         if (empty($recent)) {
             $recent = [];
         }
-        if (count($recent) > 2) {
-            $recent = array_slice($recent, 1, 2);
+        if (count($recent) > (static::RECENT_NUMBER - 1)) {
+            $recent = array_slice($recent, 1, (static::RECENT_NUMBER - 1));
         }
         $recent[] = $block;
         $this->add($recent, 'word:recent:' . $prefix);
