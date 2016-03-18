@@ -67,8 +67,8 @@
         <div id="right-block">
             <div id="head">
                 <div id="title">Donald<br/>Trump</div>
-                <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
+                <div id="description">
+                    Famously shy, Donald Trump can be tight-lipped about his plans for the presidency. You can change that. Go ahead, make that tiny fingered idiot say something.
                 </div>
             </div>
         </div>

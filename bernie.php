@@ -73,8 +73,8 @@
         <div id="right-block">
             <div id="head">
                 <div id="title">Bernie<br/>Sanders</div>
-                <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
+                <div id="description">
+                    Crazy Jewish grandpa Bernie only talks about two things: Wall Street and Flint Michigan. How about you make Bubbee say literally anything else?
                 </div>
             </div>
         </div>

@@ -67,8 +67,8 @@
         <div id="right-block">
             <div id="head">
                 <div id="title">Hillary<br/>Clinton</div>
-                <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
+                <div id="description">
+                    Hillary is wound pretty tight. What would she say after a few white wine spritzers? You tell us.
                 </div>
             </div>
         </div>
