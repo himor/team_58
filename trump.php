@@ -58,7 +58,7 @@
 </div>
 <div id="content">
     <div id="left-block">
-        <a href="donald.php" id="main-icon"><img src="images/donald_page.png"/></a>
+        <a href="trump.php" id="main-icon"><img src="images/donald_page.png"/></a>
         <a href="hillary.php" class="small-icon"><img id="hillary-icon" src="images/hillary_BW.png"/></a>
         <a href="bernie.php" class="small-icon"><img id="bernie-icon" src="images/bernie_BW.png"/></a>
     </div>
@@ -100,7 +100,7 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script>
-    var candidate = 'donald';
+    var candidate = 'trump';
 </script>
 <script src="js/team58.js"></script>
 <script src="http://vjs.zencdn.net/5.8.0/video.js"></script>

@@ -66,7 +66,7 @@
     <div id="left-block">
         <a href="bernie.php" id="main-icon"><img src="images/bernie_page.png"/></a>
         <a href="hillary.php" class="small-icon"><img id="hillary-icon" src="images/hillary_BW.png"/></a>
-        <a href="donald.php" class="small-icon"><img id="donald-icon" src="images/donald_BW.png"/></a>
+        <a href="trump.php" class="small-icon"><img id="donald-icon" src="images/donald_BW.png"/></a>
     </div>
 
     <div id="main-block">
