@@ -1,7 +1,9 @@
 var sentence = [],
     playableSentence = [],
     candidate = 'trump',
-    manyPlayers = [];
+    manyPlayers = [],
+    dontShareIt = false,
+    base = 'http://146.185.186.82/?share=';
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
@@ -29,6 +31,23 @@ $(window).on('load', function () {
             });
         }
     });
+
+    var xhr = $.ajax({
+        url: 'api.php',
+        method: 'POST',
+        data: {candidate: candidate, command: 'recent'}
+    });
+
+    xhr.done(function (data) {
+        $.each(data, function (key, block) {
+            $('.popular').append(
+                '<a href="' + base + key.toString() + '">' +
+                gluePhrase(block, false) +
+                '</a>'
+            );
+        })
+    })
+
 });
 
 function cleanup() {
@@ -40,11 +59,20 @@ function unbindClickable() {
     $('.clickable').unbind('click');
 }
 
-function updatePhrase() {
-    $('#phrase').empty();
-    $.each(sentence, function (key, phrase) {
-        $('#phrase').append("<span class='part' id='id_" + key + "' onclick='erasePart(" + key + ");'>" + phrase + "</span>");
+function gluePhrase(parts, canErase) {
+    var phrases = [];
+    $.each(parts, function (key, phrase) {
+        phrases.push("<span class='part' id='id_" + key + "'");
+        if (canErase) {
+            phrases.push(" onclick='erasePart(" + key + ");'");
+        }
+        phrases.push(">" + phrase + "</span>");
     });
+    return phrases.join('');
+}
+
+function updatePhrase() {
+    $('#phrase').html(gluePhrase(sentence, true));
 }
 
 function bindClickable() {
@@ -54,7 +82,7 @@ function bindClickable() {
         $('#input').val('').focus();
         cleanup();
         updatePhrase();
-    });
+    })
 }
 
 function erasePart(num) {
@@ -64,6 +92,7 @@ function erasePart(num) {
 
 function play() {
     $("form :input").prop('readonly', true);
+    $("#play_button").prop('disabled', true);
 
     var fullPhrases = [];
 
@@ -74,6 +103,7 @@ function play() {
     playableSentence = fullPhrases;
 
     loop();
+    shareIt();
 }
 
 function loop() {
@@ -129,6 +159,10 @@ function playFirst() {
 }
 
 function shareIt() {
+    if (dontShareIt) {
+        return;
+    }
+
     var xhr = $.ajax({
         url: 'api.php',
         method: 'POST',
@@ -136,11 +170,13 @@ function shareIt() {
     });
 
     xhr.done(function (data) {
-        $('#share').val('http://146.185.186.82/?share=' + data.key);
-    });
+        $('#share').val(base + data.key).show();
+    })
 }
 
 function load(key) {
+    dontShareIt = true;
+
     var xhr = $.ajax({
         url: 'api.php',
         method: 'POST',

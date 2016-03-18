@@ -7,6 +7,8 @@
  * User: Tuan Duong <bacduong[at]gmail[dot]com>
  * Date: 8/10/14
  * Time: 2:32 PM
+ *
+ * Updated by Mike Gordo
  */
 class Trie
 {
@@ -17,9 +19,27 @@ class Trie
         $this->trie = array('children' => array());
     }
 
+    public function loadFromRedis($prefix = '')
+    {
+        $db    = new DB();
+        $cache = $db->find('word:tree' . ($prefix ? ':' . $prefix : ''));
+        if (!empty($cache)) {
+            $this->trie = $cache;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function saveToRedis($prefix = '')
+    {
+        $db = new DB();
+        $db->add($this->trie, 'word:tree' . ($prefix ? ':' . $prefix : ''), 300);
+    }
+
     public function add($key, $value = null)
     {
-        $trieLevel = &$this->getTrieForKey($key, true);
+        $trieLevel          = &$this->getTrieForKey($key, true);
         $trieLevel['value'] = $value;
     }
 
