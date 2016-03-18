@@ -24,6 +24,15 @@ body {
     padding-top: 20px;
 }
 
+#results button {
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #060A5B;
+    border-color: #060A5B;
+}
+
 #share {
     width: 400px;
     display: none;
