@@ -2,88 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta></meta>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mixer</title>
 
-    <style>
-        @font-face{
-            font-family:'Gotham Medium';
-            src:url(fonts/gotham-medium.eot);
-            src:url(fonts/gotham-medium.eot?#iefix) format('embedded-opentype'),
-            url(fonts/gotham-medium.woff) format('woff'),
-            url(fonts/gotham-medium.ttf) format('ttf');
-        }
-        @font-face{
-            font-family:'Gotham Bold';
-            src:url(fonts/gotham-bold.eot);
-            src:url(fonts/gotham-bold.eot?#iefix) format('embedded-opentype'),
-            url(fonts/gotham-bold.woff) format('woff'),
-            url(fonts/gotham-bold.ttf) format('ttf');
-        }
-        #content {
-            min-width: 650px;
-        }
-        #main-block {
-            width: 905px;
-            position: relative;
-            left: 50%;
-            margin-left: -450px;
-        }
-        #left-block {
-            width: 285px;
-            float:left;
-            border: 1px solid green;
-        }
-        #right-block {
-            width: 700px;
-            float:left;
-        }
-        #main-block a{
-            display: block;
-        }
-        #main-icon{
-            margin: 10px 45px 25px 60px;
-            width: 180px;
-        }
-        #main-icon img {
-            width: 180px;
-        }
-        .small-icon {
-            margin: 10px 45px 25px 105px;
-        }
-        .small-icon, .small-icon img{
-            width: 99px;
-            height: 124px;
-        }
-        #hillary-icon:hover {
-            content:url(images/hillary_page.png);
-        }
-        #bernie-icon:hover {
-            content:url(images/bernie_page.png);
-        }
-        #right-block {
-            width: 600px;
-            border: 1px solid red;
-            float:left;
-        }
-        #head {
-
-        }
-        #title {
-            float: left;
-            margin-right: 45px;
-            font-family: 'Gotham Bold';
-            font-size: 100px;
-            color: #060A5B;
-        }
-        #description {
-            font-size: 18px;
-            font-famly: 'Gotham Bold';
-            color: #060A5B;
-        }
-    </style>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/team58.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/5.8.0/video-js.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 <div style="display:none">
@@ -95,20 +28,62 @@
     <img src="images/bernie_page.png"/>
 </div>
 <div id="content">
+    <div id="left-block">
+        <a href="trump.php" id="main-icon"><img src="images/donald_page.png"/></a>
+        <a href="hillary.php" class="small-icon"><img id="hillary-icon" src="images/hillary_BW.png"/></a>
+        <a href="bernie.php" class="small-icon"><img id="bernie-icon" src="images/bernie_BW.png"/></a>
+    </div>
+
     <div id="main-block">
-        <div id="left-block">
-            <a href="donald.html" id="main-icon"><img src="images/donald_page.png" /></a>
-            <a href="hillary.html" class="small-icon"><img id="hillary-icon" src="images/hillary_BW.png" /></a>
-            <a href="bernie.html" class="small-icon"><img id="bernie-icon" src="images/bernie_BW.png" /></a>
-        </div>
         <div id="right-block">
             <div id="head">
                 <div id="title">Donald<br/>Trump</div>
-                <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </div>
             </div>
-
         </div>
+
+        <div class="content-block">
+            <form>
+                <div id="results" class="form-group"></div>
+                <div class="form-group form-inline">
+                    <input title="Input text" placeholder="Input phrase" class="form-control" type="text" id="input">
+                    <button type="button" class="btn btn-success" id="play_button" onclick="play()">Say it!</button>
+                </div>
+                <div id="phrase" class="form-group"></div>
+                <div class="form-group form-inline">
+                    <input title="share" readonly class="form-control" type="text" id="share">
+                </div>
+                <br><br>
+            </form>
+            <div class="players">
+            </div>
+            <div class="popular">
+            </div>
+        </div>
+
     </div>
 </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    var candidate = 'trump';
+</script>
+<script src="js/team58.js"></script>
+<script src="http://vjs.zencdn.net/5.8.0/video.js"></script>
+<?php
+if (isset($_GET['share'])) {
+    ?>
+<script>
+    load(<?php echo "\"" . $_GET['share'] . "\""; ?>);
+</script>
+<?php
+}
+?>
+
 </body>
 </html>

@@ -1,6 +1,5 @@
 var sentence = [],
     playableSentence = [],
-    candidate = 'trump',
     manyPlayers = [],
     dontShareIt = false,
     base = 'http://146.185.186.82/?share=';
@@ -26,7 +25,8 @@ $(window).on('load', function () {
                 cleanup();
                 $.each(data, function (key, phrase) {
                     $container.append('<button type="button" class="btn btn-primary clickable">' +
-                        phrase.replace("_", " ") + "</span>");
+                        phrase.replace("_", " ") +
+                        "</button>");
                 });
                 bindClickable();
             });
