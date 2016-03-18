@@ -128,10 +128,12 @@ function preload() {
         $('.players').append(player);
 
         player.on('ended', function () {
+            sleepFor(50);
             $(this).remove();
             if ((key + 1) in playableSentence) {
                 playNumber(key + 1);
             } else {
+                sleepFor(500);
                 videojs('vp_' + key).dispose();
                 loop();
             }
@@ -190,4 +192,10 @@ function load(key) {
         updatePhrase();
         play();
     });
+}
+
+function sleepFor(sleepDuration) {
+    var now = new Date().getTime();
+    while (new Date().getTime() < now + sleepDuration) { /* do nothing */
+    }
 }
