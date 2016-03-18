@@ -1,6 +1,6 @@
 <?php
 
-require "predis/autoload.php";
+require "vendor/predis/predis/autoload.php";
 
 /**
  * Class DB
