@@ -2,7 +2,8 @@ var sentence = [],
     playableSentence = [],
     candidate = 'trump',
     manyPlayers = [],
-    dontShareIt = false;
+    dontShareIt = false,
+    base = 'http://146.185.186.82/?share=';
 
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
@@ -30,6 +31,23 @@ $(window).on('load', function () {
             });
         }
     });
+
+    var xhr = $.ajax({
+        url: 'api.php',
+        method: 'POST',
+        data: {candidate: candidate, command: 'recent'}
+    });
+
+    xhr.done(function (data) {
+        $.each(data, function (key, block) {
+            $('.popular').append(
+                '<a href="' + base + key.toString() + '">' +
+                gluePhrase(block, false) +
+                '</a>'
+            );
+        })
+    })
+
 });
 
 function cleanup() {
@@ -41,11 +59,20 @@ function unbindClickable() {
     $('.clickable').unbind('click');
 }
 
-function updatePhrase() {
-    $('#phrase').empty();
-    $.each(sentence, function (key, phrase) {
-        $('#phrase').append("<span class='part' id='id_" + key + "' onclick='erasePart(" + key + ");'>" + phrase + "</span>");
+function gluePhrase(parts, canErase) {
+    var phrases = [];
+    $.each(parts, function (key, phrase) {
+        phrases.push("<span class='part' id='id_" + key + "'");
+        if (canErase) {
+            phrases.push(" onclick='erasePart(" + key + ");'");
+        }
+        phrases.push(">" + phrase + "</span>");
     });
+    return phrases.join('');
+}
+
+function updatePhrase() {
+    $('#phrase').html(gluePhrase(sentence, true));
 }
 
 function bindClickable() {
@@ -55,7 +82,7 @@ function bindClickable() {
         $('#input').val('').focus();
         cleanup();
         updatePhrase();
-    });
+    })
 }
 
 function erasePart(num) {
@@ -143,8 +170,8 @@ function shareIt() {
     });
 
     xhr.done(function (data) {
-        $('#share').val('http://146.185.186.82/?share=' + data.key).show();
-    });
+        $('#share').val(base + data.key).show();
+    })
 }
 
 function load(key) {

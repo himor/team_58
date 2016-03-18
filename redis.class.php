@@ -8,6 +8,8 @@ class DB
     const REDIS_HOSTNAME = 'localhost';
     const REDIS_PORT     = 6379;
 
+    const RECENT_NUMBER = 3;
+
     protected $client = null;
 
     public function __construct()
@@ -68,5 +70,35 @@ class DB
     protected function keyGen()
     {
         return substr(md5(microtime(true)), 0, 6);
+    }
+
+    /**
+     * Add recent searches
+     *
+     * @param $block
+     * @param $prefix
+     */
+    public function addRecent($block, $prefix)
+    {
+        $recent = $this->find('word:recent:' . $prefix);
+        if (empty($recent)) {
+            $recent = [];
+        }
+        if (count($recent) > 2) {
+            $recent = array_slice($recent, 1, 2);
+        }
+        $recent[] = $block;
+        $this->add($recent, 'word:recent:' . $prefix);
+    }
+
+    /**
+     * Return list of recent searches
+     *
+     * @param $prefix
+     * @return mixed
+     */
+    public function findRecent($prefix)
+    {
+        return $this->find('word:recent:' . $prefix);
     }
 }
