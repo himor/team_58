@@ -48,8 +48,11 @@ $(window).on('load', function () {
             );
         })
     })
-
 });
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function cleanup() {
     unbindClickable();
@@ -67,7 +70,11 @@ function gluePhrase(parts, canErase) {
         if (canErase) {
             phrases.push(" onclick='erasePart(" + key + ");'");
         }
-        phrases.push(">" + phrase.replace("_", " ") + "</span>");
+        if (key == 0) {
+            phrases.push(">" + capitalizeFirstLetter(phrase.replace("_", " ")) + "</span>");
+        } else {
+            phrases.push(">" + phrase.replace("_", " ") + "</span>");
+        }
     });
     return phrases.join('');
 }
@@ -128,12 +135,15 @@ function preload() {
         $('.players').append(player);
 
         player.on('ended', function () {
+            sleepFor(50);
             $(this).remove();
             if ((key + 1) in playableSentence) {
                 playNumber(key + 1);
             } else {
+                sleepFor(500);
                 videojs('vp_' + key).dispose();
-                loop();
+                $("#play_button").prop('disabled', false);
+                dontShareIt = true;
             }
         })
     })
@@ -190,4 +200,10 @@ function load(key) {
         updatePhrase();
         play();
     });
+}
+
+function sleepFor(sleepDuration) {
+    var now = new Date().getTime();
+    while (new Date().getTime() < now + sleepDuration) { /* do nothing */
+    }
 }

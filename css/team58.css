@@ -1,3 +1,20 @@
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url(../fonts/gotham-medium.eot);
+    src: url(../fonts/gotham-medium.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/gotham-medium.woff) format('woff'),
+    url(../fonts/gotham-medium.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url(../fonts/gotham-bold.eot);
+    src: url(../fonts/gotham-bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/gotham-bold.woff) format('woff'),
+    url(../fonts/gotham-bold.ttf) format('ttf');
+}
+
 body {
     padding: 20px;
 }
@@ -39,25 +56,12 @@ body {
 
 .popular a {
     display: block;
+    color: #060A5B;
+    font-size: 14px;
+    font-family: 'Gotham Bold';
 }
 
 /* HTML */
-
-@font-face {
-    font-family: 'Gotham Medium';
-    src: url(../fonts/gotham-medium.eot);
-    src: url(../fonts/gotham-medium.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/gotham-medium.woff) format('woff'),
-    url(../fonts/gotham-medium.ttf) format('ttf');
-}
-
-@font-face {
-    font-family: 'Gotham Bold';
-    src: url(../fonts/gotham-bold.eot);
-    src: url(../fonts/gotham-bold.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/gotham-bold.woff) format('woff'),
-    url(../fonts/gotham-bold.ttf) format('ttf');
-}
 
 #content {
     min-width: 1250px;
