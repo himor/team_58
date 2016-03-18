@@ -80,12 +80,17 @@
         #trump:hover img{
             content:url(images/donald_hover.png);
         }
-        #bernie:hover img{
+        #bernie:hover > img, #bernie:hover img{
             content:url(images/bernie_hover.png);
         }
     </style>
 </head>
 <body>
+    <div style="display:none">
+        <img src="images/hillary_hover.png"/>
+        <img src="images/donald_hover.png"/>
+        <img src="images/bernie_hover.png"/>
+    </div>
     <div id="header">they say anything</div>
     <div id="description">
         Create a new speech for your favorite candidate. They say everything you want. <br/>

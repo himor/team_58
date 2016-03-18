@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta></meta>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        @font-face{
+            font-family:'Gotham Medium';
+            src:url(fonts/gotham-medium.eot);
+            src:url(fonts/gotham-medium.eot?#iefix) format('embedded-opentype'),
+            url(fonts/gotham-medium.woff) format('woff'),
+            url(fonts/gotham-medium.ttf) format('ttf');
+        }
+        @font-face{
+            font-family:'Gotham Bold';
+            src:url(fonts/gotham-bold.eot);
+            src:url(fonts/gotham-bold.eot?#iefix) format('embedded-opentype'),
+            url(fonts/gotham-bold.woff) format('woff'),
+            url(fonts/gotham-bold.ttf) format('ttf');
+        }
+        #content {
+            min-width: 650px;
+        }
+        #main-block {
+            width: 905px;
+            position: relative;
+            left: 50%;
+            margin-left: -450px;
+        }
+        #left-block {
+            width: 285px;
+            float:left;
+            border: 1px solid green;
+        }
+        #right-block {
+            width: 700px;
+            float:left;
+        }
+        #main-block a{
+            display: block;
+        }
+        #main-icon{
+            margin: 10px 45px 25px 60px;
+            width: 180px;
+        }
+        #main-icon img {
+            width: 180px;
+        }
+        .small-icon {
+            margin: 10px 45px 25px 105px;
+        }
+        .small-icon, .small-icon img{
+            width: 99px;
+            height: 124px;
+        }
+        #hillary-icon:hover {
+            content:url(images/hillary_page.png);
+        }
+        #bernie-icon:hover {
+            content:url(images/bernie_page.png);
+        }
+        #right-block {
+            width: 600px;
+            border: 1px solid red;
+            float:left;
+        }
+        #head {
+
+        }
+        #title {
+            float: left;
+            margin-right: 45px;
+            font-family: 'Gotham Bold';
+            font-size: 100px;
+            color: #060A5B;
+        }
+        #description {
+            font-size: 18px;
+            font-famly: 'Gotham Bold';
+            color: #060A5B;
+        }
+    </style>
+</head>
+<body>
+<div style="display:none">
+    <img src="images/hillary_BW.png"/>
+    <img src="images/bernie_BW.png"/>
+    <img src="images/donald_BW.png"/>
+    <img src="images/hillary_page.png"/>
+    <img src="images/donald_page.png"/>
+    <img src="images/bernie_page.png"/>
+</div>
+<div id="content">
+    <div id="main-block">
+        <div id="left-block">
+            <a href="donald.html" id="main-icon"><img src="images/donald_page.png" /></a>
+            <a href="hillary.html" class="small-icon"><img id="hillary-icon" src="images/hillary_BW.png" /></a>
+            <a href="bernie.html" class="small-icon"><img id="bernie-icon" src="images/bernie_BW.png" /></a>
+        </div>
+        <div id="right-block">
+            <div id="head">
+                <div id="title">Donald<br/>Trump</div>
+                <div id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
