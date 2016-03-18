@@ -4,6 +4,10 @@ var sentence = [],
     dontShareIt = false,
     base = 'http://mixer.quacks.org/' + candidate + '.php?share=';
 
+$(document).ready(function() {
+    bindClickable();
+});
+
 $(window).on('load', function () {
     $('#input').keyup(function (event) {
         var $input = $(this).val();

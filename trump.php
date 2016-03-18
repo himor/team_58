@@ -27,6 +27,9 @@
             margin-right: 10px;
             font-family:'Gotham Medium';
             font-style: italic;
+            color: #000;
+        }
+        #input:focus {
             color: #dcdcdc;
         }
         #control-block {
@@ -90,6 +93,7 @@
             </div>
             <div class="popular">
             </div>
+
         </div>
 
     </div>
