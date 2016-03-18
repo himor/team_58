@@ -1,7 +1,7 @@
 <?php
 
 include_once("trie.class.php");
-include_once("db.class.php");
+include_once("redis.class.php");
 header('Content-type: application/json');
 const DICTIONARY = 'dictionary.txt';
 
